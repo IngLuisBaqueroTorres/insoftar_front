@@ -1,0 +1,64 @@
+<mat-card>
+  <mat-card-title>Detalles de Usuario</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="userForm" (ngSubmit)="saveUser(userForm.value)">
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Nombres"
+            formControlName="nombres"
+            [(ngModel)]="user.nombres"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Correo"
+            formControlName="correo"
+            [(ngModel)]="user.correo"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Cedula"
+            formControlName="cedula"
+            [(ngModel)]="user.cedula"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Apellidos"
+            formControlName="apellidos"
+            [(ngModel)]="user.apellidos"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Telefono"
+            formControlName="telefono"
+            [(ngModel)]="user.telefono"
+          />
+        </mat-form-field>
+      </p>
+      <button type="submit" mat-raised-button color="primary">Actualizar</button>
+    </form>
+  </mat-card-content>
+
+</mat-card>

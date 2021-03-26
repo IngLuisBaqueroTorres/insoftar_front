@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <a routerLink="/login">{{ appName }}</a>
+  <span class="fill-remaining-space"></span>
+
+  <a *ngIf="authSvc.getToken()!=null" (click)="onLogout()">
+    <button mat-button>Logout</button>
+  </a>
+
+  <ng-template #showLogin>
+    <a routerLink="/login" routerLinkActive="active">
+      <button mat-button>Login</button>
+    </a>
+  </ng-template>
+</mat-toolbar>
